@@ -32,7 +32,7 @@ $VirtualMachine = New-AzureRmVMConfig -VMName $VMName -VMSize $VMSize
 $VirtualMachineOS = Set-AzureRmVMOperatingSystem -VM $VirtualMachine -windows -ComputerName $ComputerName -Credential $Credential
 
 $VirtualMachineNIC = Add-AzureRmVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id
-$VirtualMachineImage = Set-AzureRmVMSourceImage -Vm $VirtualMachine -PublisherName 'MicrosoftWindowsServer' -Offer 'WindowsServer' -SKU '2012-R2-Datacenter' -Version latest
+$VirtualMachineImage = Set-AzureRmVMSourceImage -Vm $VirtualMachine -PublisherName 'MicrosoftWindowsServer' -Offer 'WindowsServer' -Skus '2012-R2-Datacenter' -Version latest
 
 # Final Trigger to Call variable set up earlier in the script
 New-AzureRmVM -ResourceGroupName $ResourceGroupName -Location $LocationName -VM $VirtualMachine -Verbose
