@@ -1,7 +1,7 @@
-### Enamble ExecutionPolicy
+### Enable ExecutionPolicy
 ```powershell Set-ExecutionPolicy RemoteSigned```
 
-### Dowanlode the bineries for AZURE
+### Check the Powershell Version (should be above 5.0)
 ```$PSVersionTable```
 
 ### Install AzureRM module using powershell
